@@ -5,6 +5,7 @@
 	$consumerSecret = '';
 	$OAuthToken = '';
 	$OAuthTokenSecret = '';
+	$twitterOwner = ''; // Your username to receive DM notices.
 
 	define('SAFE', TRUE);
 
@@ -71,7 +72,7 @@
 	}
 
 	if($new) {
-		$t->directMessagesNew("Added {$new} releases.", 'evansims');
+		$t->directMessagesNew("Added {$new} releases.", $twitterOwner);
 	}
 
 	echo "Done. {$new} new releases.";
